@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #e5e5e5;
+        }
+
+        .container {
+            margin: auto;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: #2196F3;
+            color: white;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            padding-left: 26px;
+        }
+
+        .header span {
+            display: flex;
+            align-items: center;
+        }
+
+        .header span img {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 26px;
+        }
+
+        .section h3 {
+            font-size: 16px;
+            color: gray;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 50px;
+            margin-left: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .social-links img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
+        .info p {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .info img {
+            width: 16px;
+            margin-right: 10px;
+        }
+
+        .feedback textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            margin-top: 5px;
+        }
+
+        .button {
+            margin-top: 10px;
+            background: #2196F3;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .button:hover {
+            border: 2px solid orange;
+        }
+
+        .bottom-nav {
+            background: ghostwhite;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-nav div {
+            text-align: center;
+            font-size: 16px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <span>Investigation <img src="https://img.icons8.com/ios-filled/50/ffffff/search.png" width="18px"></span>
+        <span>🔔 &nbsp; &nbsp; ☰</span>
+    </div>
+
+    <div class="section">
+        <h3>Description</h3>
+        <div class="description">Hey Everyone! Welcome to Pen Pal network for exclusive only for writer and reader....</div>
+    </div>
+
+    <div class="section">
+        <h3>Links</h3>
+        <div class="social-links">
+            <a href="#"><img src="https://img.icons8.com/color/48/facebook.png">Facebook</a>
+            <a href="#"><img src="https://img.icons8.com/color/48/instagram-new.png">Instagram</a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/x.png">X</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>More Info</h3>
+        <div class="info">
+            <p><img src="https://img.icons8.com/ios-filled/50/000000/marker.png">India</p>
+            <p><img src="https://img.icons8.com/ios-filled/50/000000/calendar.png">Join 16 June 2005</p>
+            <p><img src="https://img.icons8.com/?size=100&id=QhmB9k7u8s6d&format=png&color=000000" style="width: 22px; height: 22px;">16,00,00,000 Views</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Feedback</h3>
+        <div class="feedback">
+            <textarea rows="3" placeholder="Write a note..."></textarea>
+            <button class="button">Add Feedback</button>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item">🏠 Home</div>
+        <div class="nav-item">📚 My Post</div>
+        <div class="nav-item">👥 Followers</div>
+        <div class="nav-item">➕ New Post</div>
+    </div>
+</div>
+
+</body>
+</html>

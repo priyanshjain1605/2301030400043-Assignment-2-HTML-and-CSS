@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tagore Books</title>
+    <style>
+        *{
+            overflow: hidden;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e5e5;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #1e90ff;
+            color: white;
+            padding: 15px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .back-button {
+            font-size: 20px;
+            color: white;
+            padding-left: 15px;
+            padding-right: 40px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .profile h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            border-radius: 10px;
+            padding-top: 25px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 16px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .book:hover{
+            border: 2px solid orange;
+        }
+
+        .book {
+            background: white;
+            padding: 45px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .book img {
+            width: auto;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .book h3 {
+            margin: 10px 0 5px;
+        }
+
+        .book p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="back-button">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="profile">
+            <img src="tagore.jpeg" alt="tagore">
+            <h2>Rabindranath Tagore</h2>
+        </div>
+    </div>
+
+    <div class="books-container">
+        <div class="book">
+            <img src="gitanjali.jpg" alt="Gitanjali">
+            <h3>Gitanjali</h3>
+            <p><strong>1910</strong></p>
+            <p>The importance of compassion, love, and sacrifice.</p>
+        </div>
+
+        <div class="book">
+            <img src="stray birds.jpg" alt="Stray Birds">
+            <h3>Stray Birds</h3>
+            <p><strong>1916</strong></p>
+            <p>A collection of poetic reflection.</p>
+        </div>
+
+        <div class="book">
+            <img src="boyhood.jpg" alt="The Boyhood Days">
+            <h3>The Boyhood Days</h3>
+            <p><strong>2018</strong></p>
+            <p>Tagore's second memoir of his childhood days.</p>
+        </div>
+
+        <div class="book">
+            <img src="hungry.jpg" alt="The Hungry Story">
+            <h3>The Hungry Story</h3>
+            <p><strong>1920</strong></p>
+            <p>A collection of poetic reflections.</p>
+        </div>
+    </div>
+
+</body>
+</html>

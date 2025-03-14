@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            background: url('backgroundimg.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            padding-left: 50px;
+        }
+
+        .container {
+            width: 350px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            left: 12rem;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            font-size: 14px;
+            outline: none;
+            background: transparent;
+        }
+
+        .dropdown-container {
+            text-align: left;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+
+        select {
+            border: none;
+            font-size: 14px;
+            background: transparent;
+            color: #007bff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .progress-bar {
+            width: 50%;
+            margin: 15px auto;
+            height: 2px;
+            background: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Enter your Details</div>
+        
+        <input type="text" class="input-field" placeholder="First Name" required>
+        <input type="text" class="input-field" placeholder="Last Name" required>
+
+        <div class="dropdown-container">
+            Preferred Language: 
+            <select>
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>German</option>
+            </select>
+        </div>
+
+        <button class="btn">NEXT</button>
+
+        <div class="progress-bar"></div>
+    </div>
+</body>
+</html>

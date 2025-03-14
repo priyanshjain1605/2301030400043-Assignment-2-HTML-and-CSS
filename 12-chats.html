@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .chat-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: #2196F3;
+            color: white;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 25px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .chat-box {
+            padding: 88px;
+            background: #f0f0f0;
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .message p {
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .sent {
+            justify-content: flex-end;
+        }
+
+        .sent p {
+            background: #2196F3;
+            color: white;
+            border-bottom-right-radius: 0px;
+        }
+
+        .received p {
+            background: #dfe6e9;
+            color: black;
+            border-bottom-left-radius: 0px;
+        }
+
+        .today{
+            font-size: 15px;
+            display: flex;
+            justify-content: space-evenly;
+            font-weight: bold;
+        }
+
+        .timestamp {
+            font-size: 10px;
+            color: gray;
+            margin-left: 10px;
+        }
+
+        .input-area {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            border-top: 1px solid #ddd;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            background: #f0f0f0;
+            margin-right: 10px;
+        }
+
+        .input-area button {
+            background: #2196F3;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .input-area button:hover {
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">
+        <div class="user-info">
+            <img src="follower.png" alt="User">
+            <div>
+                <div>User</div>
+                <small>Online</small>
+            </div>
+        </div>
+        <div>🔔 &nbsp; &nbsp; ☰</div>
+    </div>
+
+    <div class="chat-box">
+        <div class="message sent">
+            <p>“Believe in yourself and all that you are.” <span class="timestamp">08:20</span></p>
+        </div>
+        <div class="message received">
+            <p>Thanks.... <span class="timestamp">08:29</span></p>
+        </div>
+        <br><hr>
+        <div class="today">
+            <p>Today</p>
+        </div>
+        <br>
+        <div class="message sent">
+            <p>Morning! This quote will motivate and inspire you. <span class="timestamp">09:47</span></p>
+        </div>
+        <div class="message received">
+            <p>Morning, Okay Sir. <span class="timestamp">09:50</span></p>
+        </div>
+        <div class="message received">
+            <p>Thanks. <span class="timestamp">09:50</span></p>
+        </div>
+        <div class="message sent">
+            <p>You're welcome. <span class="timestamp">09:51</span></p>
+        </div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" placeholder="Type something...">
+        <button>📩</button>
+        <button>🎤</button>
+    </div>
+</div>
+
+</body>
+</html>

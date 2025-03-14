@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Followers</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #e5e5e5;
+        }
+
+        .back-button {
+            font-size: 20px;
+            color: white;
+            padding-left: 15px;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: #2196F3;
+            color: white;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+        }
+
+        .followers {
+            font-size: 20px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .toggle-buttons {
+            display: flex;
+            background: #e0f2f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 30px;
+            margin-bottom: 46px;
+        }
+
+        .toggle-buttons button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .toggle-buttons .active {
+            background: #2196F3;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .follower-card {
+            background: white;
+            padding: 44px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .follower-card:hover {
+            border: 2px solid olivedrab;
+        }
+
+        .follower-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .follower-info {
+            flex-grow: 1;
+            font-size: 18px;
+        }
+
+        .view-btn {
+            background: #2196F3;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .view-btn:hover {
+            border: 2px solid orange;
+        }
+
+        .bottom-nav {
+            background: ghostwhite;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-nav div {
+            text-align: center;
+            font-size: 16px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            color: darkcyan;
+        }
+
+        .nav-item1.active {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="back-button">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="followers">Followers</div>
+            <span>🔔 &nbsp; &nbsp; ☰</span>
+        </div>
+
+        <div class="content">
+            <div class="toggle-buttons">
+                <button class="active">Followers</button>
+                <button>Following</button>
+            </div>
+
+            <div class="follower-card">
+                <img src="robert.jpg" alt="Robert Frost">
+                <div class="follower-info">Robert Frost</div>
+                <button class="view-btn">View Details</button>
+            </div>
+
+            <div class="follower-card">
+                <img src="vikram.jpg" alt="Vikram Seth">
+                <div class="follower-info">By Vikram Seth</div>
+                <button class="view-btn">View Details</button>
+            </div>
+
+            <div class="follower-card">
+                <img src="tagore.jpeg" alt="Rabindranath Tagore">
+                <div class="follower-info">Rabindranath Tagore</div>
+                <button class="view-btn">View Details</button>
+            </div>
+
+            <div class="follower-card">
+                <img src="narayan.jpg" alt="R. K. Narayan">
+                <div class="follower-info">By R. K. Narayan</div>
+                <button class="view-btn">View Details</button>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <div class="nav-item">🏠 Home</div>
+            <div class="nav-item">📚 My Post</div>
+            <div class="nav-item1 active">👥 Followers</div>
+            <div class="nav-item">➕ New Post</div>
+        </div>
+    </div>
+</body>
+</html>

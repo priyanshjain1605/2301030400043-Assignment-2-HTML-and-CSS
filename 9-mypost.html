@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Post</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #e5e5e5;
+        }
+
+        .back-button {
+            font-size: 20px;
+            color: white;
+            padding-left: 15px;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+            background: white;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: #2196F3;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+        }
+
+        .mypost {
+            font-size: 22px;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .arrange {
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 30px;
+            margin-bottom: 40px;
+            cursor: pointer;
+        }
+
+        .arrange:hover {
+            color: orange;
+        }
+
+        .post-card {
+            background: white;
+            padding: 44px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .post-card:hover {
+            border: 2px solid olivedrab;
+        }
+
+        .post-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .post-info {
+            flex-grow: 1;
+        }
+
+        .post-info h3 {
+            font-size: 20px;
+        }
+
+        .post-info small {
+            color: gray;
+            padding-right: 15px;
+        }
+
+        .quote {
+            background: #FCE4EC;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .view-btn {
+            background: #2196F3;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .view-btn:hover {
+            border: 2px solid orange;
+        }
+
+        .bottom-nav {
+            background: ghostwhite;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-nav div {
+            text-align: center;
+            font-size: 16px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            color: darkcyan;
+        }
+
+        .nav-item1.active {
+            color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="back-button">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="mypost">My Post</div>
+            <span>🔔 &nbsp; &nbsp; ☰</span>
+        </div>
+        
+        <div class="content">
+            <div class="arrange">Arranged by ▼</div>
+
+            <div class="post-card">
+                <img src="robert.jpg" alt="Robert Frost">
+                <div class="post-info">
+                    <h3>By Robert Frost</h3>
+                    <small>01 Jan, 2025</small>
+                    <div class="quote">"Choosing a unique path."</div>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+
+            <div class="post-card">
+                <img src="vikram.jpg" alt="Vikram Seth">
+                <div class="post-info">
+                    <h3>By Vikram Seth</h3>
+                    <small>11 Jan, 2025</small>
+                    <div class="quote">"A Suitable Boy."</div>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+
+            <div class="post-card">
+                <img src="narayan.jpg" alt="R. K. Narayan">
+                <div class="post-info">
+                    <h3>By R. K. Narayan</h3>
+                    <small>21 Jan, 2025</small>
+                    <div class="quote">"Swami and Friends."</div>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+
+            <div class="post-card">
+                <img src="geoffrey.jpeg" alt="Geoffrey Chaucer">
+                <div class="post-info">
+                    <h3>By Geoffrey Chaucer</h3>
+                    <small>01 Feb, 2025</small>
+                    <div class="quote">"Money is root of evil."</div>
+                </div>
+                <button class="view-btn">View Details</button>
+            </div>
+
+        </div>
+
+        <div class="bottom-nav">
+            <div class="nav-item">🏠 Home</div>
+            <div class="nav-item1 active">📚 My Post</div>
+            <div class="nav-item">👥 Followers</div>
+            <div class="nav-item">➕ New Post</div>
+        </div>
+    </div>
+</body>
+</html>

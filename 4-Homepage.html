@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
+    <title>Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #e5e5e5;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 94.5vh;
+            background-color: #1E90FF;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-top: 12rem;
+        }
+        
+        .menu-item {
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .menu-icon {
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .menu-item:hover {
+            background-color: #E3EFFF;
+            border-radius: 20px;
+            color: black;
+        }
+
+        .content {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0a65c1;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 20px;
+        }
+
+        .guest {
+            font-size: 1.5rem;
+            width: 38px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .welcome {
+            padding: 20px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .welcome span {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .search-container {
+            display: flex;
+            padding: 0 20px;
+        }
+
+        .search-container:hover{
+            border: 2px solid orange;
+            padding: 0px;
+        }
+
+        .search-box {
+            flex: 1;
+            padding: 15px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            font-size: 16px;
+            border: none;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-icon{
+            width: 45px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            background-color: #febd68;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            color: #0f1111;
+        }
+
+        .section-title{
+            padding-top: 5rem;
+            padding-bottom: 2rem;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+
+        .writers {
+            display: flex;
+            justify-content: space-evenly;
+            overflow-x: auto;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .writer-card {
+            background: white;
+            border-radius: 10px;
+            padding-top: 25px;
+            width: 200px;
+            height: 240px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .writer-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .writer-name {
+            font-size: 18px;
+            margin-top: 5px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+        }
+
+        .writer-badge {
+            background: palevioletred;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 15px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .writer-card:hover {
+            border: 2px solid olivedrab;
+        }
+
+        .keyword {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+
+        .explore {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .explore-btn {
+            padding: 10px 15px;
+            background: white;
+            border-radius: 8px;
+            display: inline-block;
+            margin-right: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .explore-btn:hover {
+            border: 2px solid orange;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item {
+            text-align: center;
+            font-size: 14px;
+            color: gray;
+            cursor: pointer;
+            padding-top: 18px;
+            position: relative;
+            left: -6rem;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            color: darkcyan;
+        }
+
+        .nav-item1 {
+            text-align: center;
+            font-size: 14px;
+            padding-top: 18px;
+            position: relative;
+            left: -6rem;
+            cursor: pointer;
+        }
+
+        .nav-item1.active {
+            color: #007bff;
+        }
+        
+        .nav {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" class="menu-item"><span class="menu-icon">&#128221;</span> My Post</a>
+            <a href="#" class="menu-item"><span class="menu-icon">👥</span> Followers</a>
+            <a href="#" class="menu-item"><span class="menu-icon">👥</span> Following</a>
+            <a href="#" class="menu-item"><span class="menu-icon">➕</span> New Post</a>
+            <br><hr><br>
+            <a href="#" class="menu-item"><span class="menu-icon">💬</span> Conversation</a>
+            <a href="#" class="menu-item"><span class="menu-icon">🔍</span> Investigation</a>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <div class="guest">
+                    <i class="fa-regular fa-circle-user"></i>
+                </div>
+                <div class="icons">
+                    <div class="ai">
+                        <i class="fa-regular fa-lightbulb"></i>
+                    </div>
+                <div class="icons"></div>
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                <div class="icons"></div>
+                    <div class="ai">
+                        <i class="fa-regular fa-sun"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="welcome">
+                Hello, <span>Readers!</span>
+            </div>
+            
+            <div class="search-container">
+                <input placeholder="Search..." class="search-box" >
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div> 
+            </div>
+
+            <div class="section-title">Popular Writers</div>
+            <div class="writers">
+                <div class="writer-card">
+                    <img src="stephen.jpeg" alt="Stephen King" class="writer-img">
+                    <div class="writer-name">Stephen King</div>
+                    <div class="writer-badge badge-self">King of Horror</div>
+                </div>
+                <div class="writer-card">
+                    <img src="tagore.jpeg" alt="Rabindranath Tagore" class="writer-img">
+                    <div class="writer-name">Rabindranath Tagore</div>
+                    <div class="writer-badge badge-self">Literature</div>
+                </div>
+                <div class="writer-card">
+                    <img src="william-shakespeare.jpg" alt="Willian Shakespeare" class="writer-img">
+                    <div class="writer-name">Willian Shakespeare</div>
+                    <div class="writer-badge badge-self">Playwright</div>
+                </div>
+                <div class="writer-card">
+                    <img src="vikram.jpg" alt="Vikram Seth" class="writer-img">
+                    <div class="writer-name">Vikram Seth</div>
+                    <div class="writer-badge badge-self">Novels and Poetry</div>
+                </div>
+                <div class="writer-card">
+                    <img src="JK Rowling.jpeg" alt="J.K. Rowling" class="writer-img">
+                    <div class="writer-name">J.K. Rowling</div>
+                    <div class="writer-badge badge-self">Philanthropist</div>
+                </div>
+            </div>
+            <div class="keyword">Explore</div>
+            <div class="explore">
+                <div class="explore-btn">New Books</div>
+                <div class="explore-btn">More...</div>
+                <div class="explore-btn">New Launches</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <img src="home.png" alt="home" class="nav">
+        <div class="nav-item1 active">HOME</div>
+        <img src="grid.png" alt="post" class="nav">
+        <div class="nav-item">MY POST</div>
+        <img src="follower.png" alt="follower" class="nav">
+        <div class="nav-item">FOLLOWERS</div>
+        <img src="newpost.png" alt="newpost" class="nav">
+        <div class="nav-item">NEW POST</div>
+    </div>
+</body>
+</html>

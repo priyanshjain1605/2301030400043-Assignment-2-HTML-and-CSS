@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        body {
+            background: url('backgroundimg.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            padding-left: 50px;
+        }
+
+        .container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            left: 12rem;
+        }
+
+        .logo img {
+            width: 80px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .forgot-password {
+            font-size: 12px;
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .signup {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .signup a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="ink.png" alt="Quill and Book Logo">
+        </div>
+        <div class="title">Writer and Reader</div>
+        <form>
+            <input type="text" class="input-field" placeholder="Enter email or username" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <button type="submit" class="btn">Log In</button>
+        </form>
+        <div class="signup">
+            Don't have an account? <a href="#">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
